@@ -7,102 +7,291 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Astra Bypasser</title>
 
-    
-            <!-- EMBED -->
-
-            <meta property="og:title" content="Astra Bypasser">
-            <meta property="og:description" content="Astra Bypasser can supports up ">
-            <meta property="og:image" content="/icon.png">
-            <meta property="og:image:width" content="521"/>
-            <meta property="og:image:height" content="268"/>
-            <meta property="og:url" content="https://astra-ipa.life/bypasser">
     <style>
         body {
             background-color: #000;
-            color: #fff;
-            font-family: 'Courier New', monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Change height to min-height */
+    margin: 0;
+    overflow-x: hidden;
+    flex-wrap: wrap;
         }
-
+    
+        .title {
+            position: absolute;
+            top: -15px;
+            left: 10px;
+        }
+    
         .loader {
             border: 4px solid #fff;
-            border-top: 4px solid #ff00ff;
+            border-top: 4px solid #ff0000;
             border-radius: 50%;
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             animation: spin 1s linear infinite;
+            position: relative;
+            top: 300px;
         }
-
+    
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
             }
-
+    
             100% {
                 transform: rotate(360deg);
             }
         }
-
+    
         .hidden {
             display: none;
         }
-
+    
         .textbox {
             background-color: #333;
-            border: 2px solid #ff00ff;
+            border: 2px solid #fff;
             color: #fff;
             padding: 10px;
             margin: 10px;
             border-radius: 5px;
             font-size: 16px;
             width: 300px;
+            position: relative;
+            top: 50px;
+            left: 300px;
+        }
+    
+        .button:hover {
+            background-color: #CBCBCB;
+        }
+    
+        .button:active {
+            transform: scale(0.9);
         }
 
         .button {
-            background-color: #000080;
-            color: #fff;
+            background-color: #FFFFFF;
+            color: #000;
             border: none;
             padding: 10px 20px;
             font-size: 18px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            position: relative;
+            top: 50px;
+            left: 295px;
         }
 
-        .button:hover {
-            background-color: #0000ff;
+        .copy {
+            background-color: #FFFFFF;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+            top: 15px;
+            left: auto;
+        }
+    
+
+        .cf-turnstile {
+            position: relative;
+            top: 50px;
+            left: 325px;
         }
 
-        .button:active {
-            transform: scale(0.9);
+        .card-container {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 10px;
+            padding: 10px;
+            max-height: calc(100vh - 200px); 
         }
 
-        #credits {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
+        .card {
+            flex-shrink: 0; /* Prevent cards from shrinking */
+            background-color: #323232;
+            border: 2px solid #6D6D6D;
+            color: #FFFFFF;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 300px;
+            height: 200px; 
+            position: relative;
+            top: 50px;
+            font-family: sans-serif;
+            word-wrap: break-word;
+            overflow-x: hidden;
+        }
+
+        #response {
+    margin-top: 20px; /* Add margin to separate from other elements */
+}
+
+        .scrollable-card {
+            overflow-y: auto;
+        }
+
+        .card-title {
+            position: relative;
+            bottom: 23px;
+            left: 90px;
+            font-family: sans-serif;
+            font-weight: bold;
+        
+        }
+
+        .about {
+            position: relative;
+            bottom: 23px;
+            left: 130px;
+            font-weight: bold;
+        }
+
+        .links {
+            position: relative;
+            bottom: 25px;
+        }
+
+        .scrollable-card::-webkit-scrollbar {
+            width: 5px; /* Set the width of the scrollbar */
+            background-color: #323232; /* Set the background color of the scrollbar track */
+        }
+        
+        .scrollable-card::-webkit-scrollbar-thumb {
+            background-color: #000;
+            border-radius: 50px;
+        }
+
+        .description {
+            position: relative;
+            bottom: 25px;
+        }
+
+        #footer {
+            align-items: center;
+            margin-top: auto;
             font-size: 12px;
             color: #ccc;
         }
+
+        @media screen and (max-width: 425px) {
+            body {
+                overflow-x: hidden;
+            }
+            
+            .textbox {
+                background-color: #333;
+                border: 2px solid #fff;
+                color: #fff;
+                padding: 10px;
+                margin: 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                width: 300px;
+                position: relative;
+                top: 50px;
+                left: 15px;
+            }
+            
+            .cf-turnstile {
+                position: relative;
+                top: 50px;
+                left: 45px;
+            }
+
+            .button {
+                position: relative;
+                left: 130px;
+        }
+
+        #response {
+    font-family: sans-serif;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: calc(100vw - 100px); /* Limit width to viewport width minus some padding */
+    max-height: calc(100vh - 300px); /* Limit height to viewport height minus some padding */
+    padding: 10px; /* Add padding to prevent text from sticking to edges */
+    margin-top: 20px; /* Add margin to separate from other elements */
+}
+        }
+
+        .copy {
+            margin-bottom: auto;
+            position: relative;
+            left: 75px;
+        }
     </style>
+    
 </head>
 
 <body>
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
     <div class="loader"></div>
-    <h1>Loading...</h1>
+    <h1></h1>
     <div id="bypassForm" class="hidden">
-        <h2>Delorean's Bypasser!</h2>
+        <h2 class="title">Astra Bypasser</h2>
         <div class="cf-turnstile" data-sitekey="0x4AAAAAAAU8GhFcQ9OmMfMk" data-callback="eoesunabombapapupapupapupapupapupapupapupapu"></div>
         <input type="text" id="url" class="textbox" placeholder="URL to bypass" required>
         <button id="bypassButton" class="button" onclick="performBypass()">Bypass</button>
+
+        <div class="card-container">
+            <!-- First card with text content -->
+            <div class="card scrollable-card">
+                <p class="card-title">Supported Links</p>
+                <p class="links">https://rekonise.com</p>
+                <p class="links">https://www.mediafire.com</p>
+                <p class="links">https://mediafire.com</p>
+                <p class="links">https://linkvertise.com</p>
+                <p class="links">https://loot-link.com/</p>
+                <p class="links">https://loot-links.com/</p>
+                <p class="links">https://lootlink.org/</p>
+                <p class="links">https://lootlinks.co/s?</p>
+                <p class="links">https://lootdest.info/s?</p>
+                <p class="links">https://lootdest.org/s?</p>
+                <p class="links">https://lootdest.com/s?</p>
+                <p class="links">https://links-loot.com/s?</p>
+                <p class="links">https://linksloot.net/s?</p>
+                <p class="links">https://mboost.me/</p>
+                <p class="links">codex</p>
+                <p class="links">https://gateway.platoboost.com/a/8?id=</p>
+                <p class="links">https://hohohubv->ac90f67762c4.herokuapp.com/api/ge>tkeyv2?hwid=</p>
+                <p class="links">https://leasurepartment.xyz/?h=</p>
+                <p class="links">https://spdmteam.com/key-system->1?hwid=</p>
+                <p class="links">https://leasurepartment.xyz</p>
+                <p class="links">https://pandadevelopment.net/getkey?</p>
+                <p class="links">https://auth.pandadevelopment.net/getkey?</p>
+                <p class="links">https://trigonevo.com/getkey</p>
+                <p class="links">https://auth.pandadevelopment.cloud/</p>
+                <p class="links">https://pandadevelopment.cloud/</p>
+            </div>
+            
+            <!-- Second card with text content -->
+            <div class="card">
+                <p class="card-title">Instant Response</p>
+                <p class="description">Astra Bypasser is fast, intuitive, and user friendly, allowing you to navigate to your destination effortlessly.</p>
+            </div>
+            
+            <!-- Third card with text content -->
+            <div class="card">
+                <p class="about">About</p>
+                <p class="description">Astra Bypasser utilizes an API that is not only quick and easy to use but also to ensure seamless navigation experiences.</p>
+            </div>
+        </div>
     </div>
     <div id="response" class="hidden"></div>
-    <div id="credits">Made with ❤️ by corrupted</div>
 	<script>
 		// Crear el contenedor de la notificación
 		var notificationContainer = document.createElement('div');
@@ -112,8 +301,6 @@
 		notificationContainer.style.transform = 'translateX(-50%)';
 		notificationContainer.style.width = '80%';
 		notificationContainer.style.padding = '20px';
-		notificationContainer.style.backgroundColor = '#808080'; // Fondo gris
-		notificationContainer.style.border = '2px solid blue';
 		notificationContainer.style.borderRadius = '15px';
 		notificationContainer.style.textAlign = 'center';
 		notificationContainer.style.fontSize = 'small';
@@ -121,8 +308,6 @@
 
 		// Crear la notificación dentro del contenedor
 		var notification = document.createElement('div');
-		notification.innerHTML = 'For more fast bypasses enter here : <a href="https://discord.gg/hKUUpWyC7G" style="color:#800080;">https://discord.gg/hKUUpWyC7G</a>';
-		notification.style.color = '#800080'; // Texto morado
 
 		// Agregar la notificación al contenedor
 		notificationContainer.appendChild(notification);
@@ -231,7 +416,7 @@
     function addCopyButton(url) {
         const copyButton = document.createElement('button');
         copyButton.innerText = 'Copy';
-        copyButton.className = 'button';
+        copyButton.className = 'copy';
         copyButton.onclick = () => {
             navigator.clipboard.writeText(url)
                 .then(() => {
@@ -245,8 +430,6 @@
     }
 </script>
 
-
-
+<footer id="footer">Made with ❤️ by corrupted</footer>
 </body>
-
 </html>
