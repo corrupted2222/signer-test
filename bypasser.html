@@ -17,6 +17,7 @@
     min-height: 100vh; /* Change height to min-height */
     margin: 0;
     overflow-x: hidden;
+    flex-wrap: wrap;
         }
     
         .title {
@@ -85,6 +86,20 @@
             top: 50px;
             left: 295px;
         }
+
+        .copy {
+            background-color: #FFFFFF;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+            top: 50px;
+            left: 295px;
+        }
     
 
         .cf-turnstile {
@@ -119,6 +134,12 @@
             word-wrap: break-word;
             overflow-x: hidden;
         }
+
+        #response {
+            font-family: sans-serif;
+            position: relative;
+            bottom: 50px;
+}
 
         .scrollable-card {
             overflow-y: auto;
@@ -380,7 +401,7 @@
     function addCopyButton(url) {
         const copyButton = document.createElement('button');
         copyButton.innerText = 'Copy';
-        copyButton.className = 'button';
+        copyButton.className = 'copy';
         copyButton.onclick = () => {
             navigator.clipboard.writeText(url)
                 .then(() => {
