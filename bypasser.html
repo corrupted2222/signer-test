@@ -137,12 +137,13 @@
 
         #response {
     font-family: sans-serif;
-    flex-wrap: wrap;
-    position: relative;
-    max-width: calc(100vw - 40px); /* Limit width to viewport width minus some padding */
+    flex-wrap: nowrap; /* Prevent text wrapping */
+    white-space: nowrap; /* Prevent text wrapping */
     overflow-x: auto; /* Enable horizontal scrolling if necessary */
     padding: 10px; /* Add padding to prevent text from sticking to edges */
     margin-top: 20px; /* Add margin to separate from other elements */
+    max-width: calc(100vw - 40px); /* Limit width to viewport width minus some padding */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
 }
 
         .scrollable-card {
