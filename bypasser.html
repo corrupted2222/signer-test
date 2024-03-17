@@ -136,12 +136,6 @@
         }
 
         #response {
-    font-family: sans-serif;
-    flex-wrap: wrap;
-    position: relative;
-    max-width: calc(100vw - 100px); /* Limit width to viewport width minus some padding */
-    overflow-x: auto; /* Enable horizontal scrolling if necessary */
-    padding: 10px; /* Add padding to prevent text from sticking to edges */
     margin-top: 20px; /* Add margin to separate from other elements */
 }
 
@@ -221,6 +215,17 @@
                 position: relative;
                 left: 130px;
         }
+
+        #response {
+    font-family: sans-serif;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: calc(100vw - 100px); /* Limit width to viewport width minus some padding */
+    max-height: calc(100vh - 300px); /* Limit height to viewport height minus some padding */
+    overflow: auto; /* Enable scrolling if necessary */
+    padding: 10px; /* Add padding to prevent text from sticking to edges */
+    margin-top: 20px; /* Add margin to separate from other elements */
+}
         }
     </style>
     
