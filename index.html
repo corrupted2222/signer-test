@@ -1,435 +1,537 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class=" odttxlniql idc0_350">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Astra Bypasser</title>
-
-    <style>
-        body {
-            background-color: #000;
-    color: #fff;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    min-height: 100vh; /* Change height to min-height */
-    margin: 0;
-    overflow-x: hidden;
-    flex-wrap: wrap;
-        }
-    
-        .title {
-            position: absolute;
-            top: -15px;
-            left: 10px;
-        }
-    
-        .loader {
-            border: 4px solid #fff;
-            border-top: 4px solid #ff0000;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            position: relative;
-            top: 300px;
-        }
-    
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-    
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    
-        .hidden {
-            display: none;
-        }
-    
-        .textbox {
-            background-color: #333;
-            border: 2px solid #fff;
-            color: #fff;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 5px;
-            font-size: 16px;
-            width: 300px;
-            position: relative;
-            top: 50px;
-            left: 300px;
-        }
-    
-        .button:hover {
-            background-color: #CBCBCB;
-        }
-    
-        .button:active {
-            transform: scale(0.9);
-        }
-
-        .button {
-            background-color: #FFFFFF;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            position: relative;
-            top: 50px;
-            left: 295px;
-        }
-
-        .copy {
-            background-color: #FFFFFF;
-            color: #000;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            position: relative;
-            top: 15px;
-            left: auto;
-        }
-    
-
-        .cf-turnstile {
-            position: relative;
-            top: 50px;
-            left: 325px;
-        }
-
-        .card-container {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 10px;
-            padding: 10px;
-            max-height: calc(100vh - 200px); 
-        }
-
-        .card {
-            flex-shrink: 0; /* Prevent cards from shrinking */
-            background-color: #323232;
-            border: 2px solid #6D6D6D;
-            color: #FFFFFF;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
-            font-size: 16px;
-            width: 300px;
-            height: 200px; 
-            position: relative;
-            top: 50px;
-            font-family: sans-serif;
-            word-wrap: break-word;
-            overflow-x: hidden;
-        }
-
-        #response {
-    margin-top: 20px; /* Add margin to separate from other elements */
-}
-
-        .scrollable-card {
-            overflow-y: auto;
-        }
-
-        .card-title {
-            position: relative;
-            bottom: 23px;
-            left: 90px;
-            font-family: sans-serif;
-            font-weight: bold;
-        
-        }
-
-        .about {
-            position: relative;
-            bottom: 23px;
-            left: 130px;
-            font-weight: bold;
-        }
-
-        .links {
-            position: relative;
-            bottom: 25px;
-        }
-
-        .scrollable-card::-webkit-scrollbar {
-            width: 5px; /* Set the width of the scrollbar */
-            background-color: #323232; /* Set the background color of the scrollbar track */
-        }
-        
-        .scrollable-card::-webkit-scrollbar-thumb {
-            background-color: #000;
-            border-radius: 50px;
-        }
-
-        .description {
-            position: relative;
-            bottom: 25px;
-        }
-
-        #footer {
-            align-items: center;
-            margin-top: auto;
-            font-size: 12px;
-            color: #ccc;
-        }
-
-        @media screen and (max-width: 425px) {
-            body {
-                overflow-x: hidden;
-            }
-            
-            .textbox {
-                background-color: #333;
-                border: 2px solid #fff;
-                color: #fff;
-                padding: 10px;
-                margin: 10px;
-                border-radius: 5px;
-                font-size: 16px;
-                width: 300px;
-                position: relative;
-                top: 50px;
-                left: 15px;
-            }
-            
-            .cf-turnstile {
-                position: relative;
-                top: 50px;
-                left: 45px;
-            }
-
-            .button {
-                position: relative;
-                left: 130px;
-        }
-
-        #response {
-    font-family: sans-serif;
-    flex-wrap: wrap;
-    position: relative;
-    max-width: calc(100vw - 100px); /* Limit width to viewport width minus some padding */
-    max-height: calc(100vh - 300px); /* Limit height to viewport height minus some padding */
-    padding: 10px; /* Add padding to prevent text from sticking to edges */
-    margin-top: 20px; /* Add margin to separate from other elements */
-}
-        }
-
-        .copy {
-            margin-bottom: auto;
-            position: relative;
-            left: 75px;
-        }
-    </style>
-    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Delorean's Bypasser</title>
+    <meta name="description" content="The best adlinks bypasser!">
+    <link rel="icon" href="https://cdn.discordapp.com/avatars/589543636656586764/a_5323928bd7b26d6e0f99727be6edcfcc.gif?size=1024">
+	<style>
+		:after,:before{
+			box-sizing:border-box;
+			border:0 solid #e5e7eb
+		}
+		:after,:before{
+			--tw-content:""
+		}
+		html{
+			line-height:1.5;
+			-webkit-text-size-adjust:100%;
+			-moz-tab-size:4;
+			-o-tab-size:4;
+			tab-size:4;
+			font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+		}
+		body{
+			line-height:inherit
+		}
+		hr{
+			height:0;
+			color:inherit;
+			border-top-width:1px
+		}
+		abbr:where([title]){
+			-webkit-text-decoration:underline dotted;
+			text-decoration:underline dotted
+		}
+		h1,h2,h3,h4,h5,h6{
+			font-size:inherit;
+			font-weight:inherit
+		}
+		a{
+			color:inherit;
+			text-decoration:inherit
+		}
+		b,strong{
+			font-weight:bolder
+		}
+		code,kbd,pre,samp{
+			font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+			font-size:1em
+		}
+		small{
+			font-size:80%
+		}
+		sub,sup{
+			font-size:75%;
+			line-height:0;
+			position:relative;
+			vertical-align:baseline
+		}
+		sub{
+			bottom:-.25em
+		}
+		sup{
+			top:-.5em
+		}
+		table{
+			text-indent:0;
+			border-color:inherit;
+			border-collapse:collapse
+		}
+		button,input,optgroup,select,textarea{
+			font-family:inherit;
+			font-size:100%;
+			font-weight:inherit;
+			line-height:inherit;
+			color:inherit;
+			margin:0;
+			padding:0
+		}
+		button,select{
+			text-transform:none
+		}
+		[type=button],[type=reset],[type=submit],button{
+			-webkit-appearance:button;
+			background-color:transparent;
+			background-image:none
+		}
+		:-moz-focusring{
+			outline:auto
+		}
+		:-moz-ui-invalid{
+			box-shadow:none
+		}
+		progress{
+			vertical-align:baseline
+		}
+		::-webkit-inner-spin-button,::-webkit-outer-spin-button{
+			height:auto
+		}
+		[type=search]{
+			-webkit-appearance:textfield;
+			outline-offset:-2px
+		}
+		::-webkit-search-decoration{
+			-webkit-appearance:none
+		}
+		::-webkit-file-upload-button{
+			-webkit-appearance:button;
+			font:inherit
+		}
+		summary{
+			display:list-item
+		}
+		blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{
+			margin:0
+		}
+		fieldset{
+			margin:0
+		}
+		fieldset,legend{
+			padding:0
+		}
+		menu,ol,ul{
+			list-style:none;
+			margin:0;
+			padding:0
+		}
+		textarea{
+			resize:vertical
+		}
+		input::-moz-placeholder,textarea::-moz-placeholder{
+			opacity:1;
+			color:#9ca3af
+		}
+		input::placeholder,textarea::placeholder{
+			opacity:1;
+			color:#9ca3af
+		}
+		[role=button],button{
+			cursor:pointer
+		}
+		:disabled{
+			cursor:default
+		}
+		audio,canvas,embed,iframe,img,object,svg,video{
+			display:block;
+			vertical-align:middle
+		}
+		img,video{
+			max-width:100%;
+			height:auto
+		}
+		*,:after,:before{
+			--tw-border-spacing-x:0;
+			--tw-border-spacing-y:0;
+			--tw-translate-x:0;
+			--tw-translate-y:0;
+			--tw-rotate:0;
+			--tw-skew-x:0;
+			--tw-skew-y:0;
+			--tw-scale-x:1;
+			--tw-scale-y:1;
+			--tw-pan-x: ;
+			--tw-pan-y: ;
+			--tw-pinch-zoom: ;
+			--tw-scroll-snap-strictness:proximity;
+			--tw-ordinal: ;
+			--tw-slashed-zero: ;
+			--tw-numeric-figure: ;
+			--tw-numeric-spacing: ;
+			--tw-numeric-fraction: ;
+			--tw-ring-inset: ;
+			--tw-ring-offset-width:0px;
+			--tw-ring-offset-color:#fff;
+			--tw-ring-color:rgba(59,130,246,.5);
+			--tw-ring-offset-shadow:0 0 #0000;
+			--tw-ring-shadow:0 0 #0000;
+			--tw-shadow:0 0 #0000;
+			--tw-shadow-colored:0 0 #0000;
+			--tw-blur: ;
+			--tw-brightness: ;
+			--tw-contrast: ;
+			--tw-grayscale: ;
+			--tw-hue-rotate: ;
+			--tw-invert: ;
+			--tw-saturate: ;
+			--tw-sepia: ;
+			--tw-drop-shadow: ;
+			--tw-backdrop-blur: ;
+			--tw-backdrop-brightness: ;
+			--tw-backdrop-contrast: ;
+			--tw-backdrop-grayscale: ;
+			--tw-backdrop-hue-rotate: ;
+			--tw-backdrop-invert: ;
+			--tw-backdrop-opacity: ;
+			--tw-backdrop-saturate: ;
+			--tw-backdrop-sepia: 
+		}
+		::-webkit-backdrop{
+			--tw-border-spacing-x:0;
+			--tw-border-spacing-y:0;
+			--tw-translate-x:0;
+			--tw-translate-y:0;
+			--tw-rotate:0;
+			--tw-skew-x:0;
+			--tw-skew-y:0;
+			--tw-scale-x:1;
+			--tw-scale-y:1;
+			--tw-pan-x: ;
+			--tw-pan-y: ;
+			--tw-pinch-zoom: ;
+			--tw-scroll-snap-strictness:proximity;
+			--tw-ordinal: ;
+			--tw-slashed-zero: ;
+			--tw-numeric-figure: ;
+			--tw-numeric-spacing: ;
+			--tw-numeric-fraction: ;
+			--tw-ring-inset: ;
+			--tw-ring-offset-width:0px;
+			--tw-ring-offset-color:#fff;
+			--tw-ring-color:rgba(59,130,246,.5);
+			--tw-ring-offset-shadow:0 0 #0000;
+			--tw-ring-shadow:0 0 #0000;
+			--tw-shadow:0 0 #0000;
+			--tw-shadow-colored:0 0 #0000;
+			--tw-blur: ;
+			--tw-brightness: ;
+			--tw-contrast: ;
+			--tw-grayscale: ;
+			--tw-hue-rotate: ;
+			--tw-invert: ;
+			--tw-saturate: ;
+			--tw-sepia: ;
+			--tw-drop-shadow: ;
+			--tw-backdrop-blur: ;
+			--tw-backdrop-brightness: ;
+			--tw-backdrop-contrast: ;
+			--tw-backdrop-grayscale: ;
+			--tw-backdrop-hue-rotate: ;
+			--tw-backdrop-invert: ;
+			--tw-backdrop-opacity: ;
+			--tw-backdrop-saturate: ;
+			--tw-backdrop-sepia: 
+		}
+		::backdrop{
+			--tw-border-spacing-x:0;
+			--tw-border-spacing-y:0;
+			--tw-translate-x:0;
+			--tw-translate-y:0;
+			--tw-rotate:0;
+			--tw-skew-x:0;
+			--tw-skew-y:0;
+			--tw-scale-x:1;
+			--tw-scale-y:1;
+			--tw-pan-x: ;
+			--tw-pan-y: ;
+			--tw-pinch-zoom: ;
+			--tw-scroll-snap-strictness:proximity;
+			--tw-ordinal: ;
+			--tw-slashed-zero: ;
+			--tw-numeric-figure: ;
+			--tw-numeric-spacing: ;
+			--tw-numeric-fraction: ;
+			--tw-ring-inset: ;
+			--tw-ring-offset-width:0px;
+			--tw-ring-offset-color:#fff;
+			--tw-ring-color:rgba(59,130,246,.5);
+			--tw-ring-offset-shadow:0 0 #0000;
+			--tw-ring-shadow:0 0 #0000;
+			--tw-shadow:0 0 #0000;
+			--tw-shadow-colored:0 0 #0000;
+			--tw-blur: ;
+			--tw-brightness: ;
+			--tw-contrast: ;
+			--tw-grayscale: ;
+			--tw-hue-rotate: ;
+			--tw-invert: ;
+			--tw-saturate: ;
+			--tw-sepia: ;
+			--tw-drop-shadow: ;
+			--tw-backdrop-blur: ;
+			--tw-backdrop-brightness: ;
+			--tw-backdrop-contrast: ;
+			--tw-backdrop-grayscale: ;
+			--tw-backdrop-hue-rotate: ;
+			--tw-backdrop-invert: ;
+			--tw-backdrop-opacity: ;
+			--tw-backdrop-saturate: ;
+			--tw-backdrop-sepia: 
+		}
+		.absolute{
+			position:absolute
+		}
+		.relative{
+			position:relative
+		}
+		.inset-y-0{
+			top:0;
+			bottom:0
+		}
+		.left-0{
+			left:0
+		}
+		.mt-2{
+			margin-top:.5rem
+		}
+		.mt-3{
+			margin-top:.75rem
+		}
+		.mt-1{
+			margin-top:.25rem
+		}
+		.mt-10{
+			margin-top:2.5rem
+		}
+		.block{
+			display:block
+		}
+		.flex{
+			display:flex
+		}
+		.h-\[10px\]{
+			height:10px
+		}
+		.min-h-screen{
+			min-height:100vh
+		}
+		.w-full{
+			width:100%
+		}
+		.w-\[10px\]{
+			width:10px
+		}
+		.min-w-\[27vw\]{
+			min-width:27vw
+		}
+		.max-w-\[5rem\]{
+			max-width:5rem
+		}
+		.flex-shrink-0{
+			flex-shrink:0
+		}
+		.flex-grow-0{
+			flex-grow:0
+		}
+		.flex-row{
+			flex-direction:row
+		}
+		.flex-col{
+			flex-direction:column
+		}
+		.items-center{
+			align-items:center
+		}
+		.justify-center{
+			justify-content:center
+		}
+		.justify-between{
+			justify-content:space-between
+		}
+		.truncate{
+			overflow:hidden;
+			text-overflow:ellipsis;
+			white-space:nowrap
+		}
+		.rounded-lg{
+			border-radius:.5rem
+		}
+		.bg-white\/5{
+			background-color:hsla(0,0%,100%,.05)
+		}
+		.bg-\[\#434581\]{
+			--tw-bg-opacity:1;
+			background-color:rgb(67 69 129/var(--tw-bg-opacity))
+		}
+		.py-3{
+			padding-top:.75rem;
+			padding-bottom:.75rem
+		}
+		.px-6{
+			padding-left:1.5rem;
+			padding-right:1.5rem
+		}
+		.pr-4{
+			padding-right:1rem
+		}
+		.pl-8{
+			padding-left:2rem
+		}
+		.pl-3{
+			padding-left:.75rem
+		}
+		.text-center{
+			text-align:center
+		}
+		.text-4xl{
+			font-size:2.25rem;
+			line-height:2.5rem
+		}
+		.text-xs{
+			font-size:.75rem;
+			line-height:1rem
+		}
+		.text-\[0\.6rem\]{
+			font-size:.6rem
+		}
+		.font-semibold{
+			font-weight:600
+		}
+		.uppercase{
+			text-transform:uppercase
+		}
+		.tracking-wider{
+			letter-spacing:.05em
+		}
+		.text-\[\#fff\]{
+			--tw-text-opacity:1;
+			color:rgb(255 255 255/var(--tw-text-opacity))
+		}
+		.text-\[\#6b6ecc\]{
+			--tw-text-opacity:1;
+			color:rgb(107 110 204/var(--tw-text-opacity))
+		}
+		.text-opacity-80{
+			--tw-text-opacity:0.8
+		}
+		.opacity-50{
+			opacity:.5
+		}
+		.outline-none{
+			outline:2px solid transparent;
+			outline-offset:2px
+		}
+		.transition-all{
+			transition-property:all;
+			transition-timing-function:cubic-bezier(.4,0,.2,1);
+			transition-duration:.15s
+		}
+		.duration-200{
+			transition-duration:.2s
+		}
+		:root{
+			--background-color:#0a0c10;
+			--text-color:#fff
+		}
+		body{
+			overflow-x:hidden;
+			color-scheme:dark;
+			scroll-behavior:smooth;
+			-webkit-text-size-adjust:100%;
+			font-family:IBM Plex Sans,sans-serif;
+			background:var(--background-color);
+			color:var(--text-color);
+			min-width:360px;
+			width:100%;
+			height:100%;
+			margin:0
+		}
+		.hover\:bg-white\/10:hover{
+			background-color:hsla(0,0%,100%,.1)
+		}
+		.focus\:ring-2:focus{
+			--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+			--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+			box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)
+		}
+		.cf-turnstile {
+			display: flex;
+			justify-content: center;
+			margin-block: 20px;
+		}
+		.responsess {
+			display: flex;
+			justify-content: center;
+			margin-block: 40px;
+		}
+	</style>
 </head>
 
 <body>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
-    <div class="loader"></div>
-    <h1></h1>
-    <div id="bypassForm" class="hidden">
-        <h2 class="title">Astra Bypasser</h2>
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAAAU8GhFcQ9OmMfMk" data-callback="eoesunabombapapupapupapupapupapupapupapupapu"></div>
-        <input type="text" id="url" class="textbox" placeholder="URL to bypass" required>
-        <button id="bypassButton" class="button" onclick="performBypass()">Bypass</button>
-
-        <div class="card-container">
-            <!-- First card with text content -->
-            <div class="card scrollable-card">
-                <p class="card-title">Supported Links</p>
-                <p class="links">https://rekonise.com</p>
-                <p class="links">https://www.mediafire.com</p>
-                <p class="links">https://mediafire.com</p>
-                <p class="links">https://linkvertise.com</p>
-                <p class="links">https://loot-link.com/</p>
-                <p class="links">https://loot-links.com/</p>
-                <p class="links">https://lootlink.org/</p>
-                <p class="links">https://lootlinks.co/s?</p>
-                <p class="links">https://lootdest.info/s?</p>
-                <p class="links">https://lootdest.org/s?</p>
-                <p class="links">https://lootdest.com/s?</p>
-                <p class="links">https://links-loot.com/s?</p>
-                <p class="links">https://linksloot.net/s?</p>
-                <p class="links">https://mboost.me/</p>
-                <p class="links">codex</p>
-                <p class="links">https://gateway.platoboost.com/a/8?id=</p>
-                <p class="links">https://hohohubv->ac90f67762c4.herokuapp.com/api/ge>tkeyv2?hwid=</p>
-                <p class="links">https://leasurepartment.xyz/?h=</p>
-                <p class="links">https://spdmteam.com/key-system->1?hwid=</p>
-                <p class="links">https://leasurepartment.xyz</p>
-                <p class="links">https://pandadevelopment.net/getkey?</p>
-                <p class="links">https://auth.pandadevelopment.net/getkey?</p>
-                <p class="links">https://trigonevo.com/getkey</p>
-                <p class="links">https://auth.pandadevelopment.cloud/</p>
-                <p class="links">https://pandadevelopment.cloud/</p>
-            </div>
-            
-            <!-- Second card with text content -->
-            <div class="card">
-                <p class="card-title">Instant Response</p>
-                <p class="description">Astra Bypasser is fast, intuitive, and user friendly, allowing you to navigate to your destination effortlessly.</p>
-            </div>
-            
-            <!-- Third card with text content -->
-            <div class="card">
-                <p class="about">About</p>
-                <p class="description">Astra Bypasser utilizes an API that is not only quick and easy to use but also to ensure seamless navigation experiences.</p>
-            </div>
-        </div>
-    </div>
-    <div id="response" class="hidden"></div>
-	<script>
-		// Crear el contenedor de la notificación
-		var notificationContainer = document.createElement('div');
-		notificationContainer.style.position = 'fixed';
-		notificationContainer.style.top = '50px';
-		notificationContainer.style.left = '50%';
-		notificationContainer.style.transform = 'translateX(-50%)';
-		notificationContainer.style.width = '80%';
-		notificationContainer.style.padding = '20px';
-		notificationContainer.style.borderRadius = '15px';
-		notificationContainer.style.textAlign = 'center';
-		notificationContainer.style.fontSize = 'small';
-		notificationContainer.style.overflow = 'hidden';
-
-		// Crear la notificación dentro del contenedor
-		var notification = document.createElement('div');
-
-		// Agregar la notificación al contenedor
-		notificationContainer.appendChild(notification);
-
-		// Agregar el contenedor al cuerpo del documento
-		document.body.appendChild(notificationContainer);
-		notification.style.top = '-100'
-		// Bajar la notificación
-		setTimeout(function() {
-			notification.style.top = '0';
-		}, 1000);
-
-		// Subir la notificación después de 10 segundos
-		setTimeout(function() {
-			notification.style.top = '-100px';
-		}, 11000);
-		
-	</script>
-<script>
-    let turnstiletoken;
-    setTimeout(() => {
-        document.querySelector('.loader').style.display = 'none';
-        document.querySelector('h1').style.display = "none";
-        document.querySelector('#bypassForm').style.display = 'block';
-    }, 2000);
-
-    const usa = new URL(window.location.href).searchParams.get("url");
-    document.getElementById("url").value = usa;
-    if (usa) {
-        notification.innerHTML = 'We detected your link! Just complete turnstile and it will be automatically bypassed! https://discord.gg/hKUUpWyC7G';
-    }
-
-    function eoesunabombapapupapupapupapupapupapupapupapu(token) {
-        turnstiletoken = token;
-        const esotilin = new URL(window.location.href).searchParams.get("url");
-        if (esotilin) {
-            performBypass();
-            return;
-        }
-    }
-
-	function generateRandomString(length) {
-	  let result = '';
-	  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	  const charactersLength = characters.length;
-	  for (let i = 0; i < length; i++) {
-		result += characters.charAt(Math.floor(Math.random() * charactersLength));
-	  }
-	  return result;
-	}
-
-    function performBypass() {
-        const url = document.getElementById('url').value;
-
-        if (!turnstiletoken || !url) {
-            alert('Turnstile and URL are required!');
-            return;
-        }
-
-        document.querySelector('#bypassForm').style.display = 'none';
-        document.querySelector('.loader').style.display = 'block';
-        fetch("https://corsproxy.io/?https://dlr-api-w.vercel.app/?wdak="+generateRandomString(50), {
-			method: 'GET'
-        })
-            .then(response => response.json())
-            .then(data => {
-                const requestURL = `${data.api_url}/api/bypass?url=${url}&turnstile=${turnstiletoken}&verifytoken=${generateRandomString(1500)}`;
-
-                fetch(requestURL, {
-                    method: 'GET',
-                    headers: {
-                        'ngrok-skip-browser-warning': 'gogogo',
-                        'Authorization': 'Bearer Delorean_Public'
-                    }
+    <script>
+		let turnstiletoken
+        function performBypass(url) {
+            if (!turnstiletoken || !url) {
+                alert('Turnstile and URL are required!');
+                return;
+            }
+            fetch(`http://test.cors.workers.dev/?https://dlr-api.woozym.workers.dev/?url=${url}&turnstile=${turnstiletoken}`, {
+                    method: 'GET'
                 })
-                    .then(res => res.json())
-                    .then(data => {
-                        setTimeout(() => {
-                            window.location.reload();
-                        }, 50000);
-
-                        document.querySelector('.loader').style.display = 'none';
-                        document.querySelector('#response').style.display = 'block';
-                        document.querySelector('#response').innerText = data.result;
-                        addCopyButton(data.result);
-                    })
-                    .catch(err => {
-                        document.querySelector('.loader').style.display = 'none';
-                        document.querySelector('#response').style.display = 'block';
-                        document.querySelector('#response').innerText = err;
-
-                        setTimeout(() => {
-                            if (new URL(window.location.href).searchParams.get("url")) {
-                                window.location.href = "./bypass";
-                                return;
-                            }
-                            window.location.reload();
-                        }, 50000);
-                    });
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }
-
-    function addCopyButton(url) {
-        const copyButton = document.createElement('button');
-        copyButton.innerText = 'Copy';
-        copyButton.className = 'copy';
-        copyButton.onclick = () => {
-            navigator.clipboard.writeText(url)
-                .then(() => {
-                    copyButton.innerText = "Copied!";
+                .then(response => response.json())
+                .then(data => {
+					document.getElementById('response').innerText=data.result
                 })
-                .catch(err => {
-                    console.error('Error copying URL to clipboard:', err);
+                .catch(error => {
+                    document.getElementById('response').value='Error fetching data:'+error;
                 });
-        };
-        document.getElementById('response').appendChild(copyButton);
-    }
-</script>
+        }
+        function eoesunabombapapupapupapupapupapupapupapupapu(token) {
+            turnstiletoken = token;
+            const esotilin = new URL(window.location.href).searchParams.get("url");
+            if (esotilin) {
+                performBypass(esotilin);
+                return;
+            }
+        }
+		function canserberovive(event){
+			event.preventDefault()
+			performBypass(document.getElementById('url').value)
+		}
+    </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"defer></script>
 
-<footer id="footer">Made with ❤️ by corrupted</footer>
+    <div id="W">
+        <main>
+            <div class="min-h-screen flex flex-col justify-center items-center">
+                <h1 class="text-4xl font-semibold text-center">Delorean's Bypasser</h1>
+                <form class="mt-2 min-w-[27vw] items-center">
+                    <div class="flex flex-col">
+                        <label class="relative block mt-2">
+							<div class="cf-turnstile" data-sitekey="0x4AAAAAAAU8GhFcQ9OmMfMk" data-callback="eoesunabombapapupapupapupapupapupapupapupapu"></div>
+                            <input id="url" type="text" aria-label="Adlink URL" placeholder="https://linkvertise.com/..." class="w-full text-xs py-3 pr-4 pl-8 rounded-lg bg-white/5 flex flex-row justify-between items-center outline-none focus:ring-2 transition-all duration-200" data-ddg-inputtype="unknown">
+                        </label>
+                    </div>
+                    <button onclick="canserberovive(event)" class="w-full mt-3 bg-[#434581] text-[#fff] text-xs text-opacity-80 rounded-lg px-6 py-3 uppercase font-semibold tracking-wider" style="transform: none;">Bypass!</button>
+                    <p class="mt-1 text-[0.6rem] opacity-50 text-center">Made by <span class="text-[#6b6ecc]"><strong>corrupted</strong></span></p>
+					<div id="response" class = "responsess"></div>
+                </form>
+                <div class="mt-10"></div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
